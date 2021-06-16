@@ -1,0 +1,50 @@
+.App {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    hr {
+        width: 500px;
+    }
+    &__navigate nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline-start: 0px;
+        li {
+            padding: 20px;
+            list-style: none;
+        }
+        
+    }
+    a {
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #666;
+    }
+    a:hover {
+        color: #333;
+    }
+    a.active{
+        box-shadow: rgba(51, 51, 51, 0.26) 1px 1px 10px 0.1px ;
+    }
+}
+
+.Cars {
+    display: flex;
+}
+
+.Car {
+    border: 1px solid #ccc;
+    width: 100px;
+    padding: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
