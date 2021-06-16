@@ -30,11 +30,11 @@ class Cars extends Component {
                             year={car.year}
                             pathname={car.name}
                             // вместо того чтобы передавать все props - можно в компоненте Car добавить 
-                            // import { withRouter } from 'react-router-dom' А данный компонент обернуть в withRouter
+                            // import { withRouter } from 'react-router-dom' и этот (Car) компонент обернуть в withRouter
                             // {...this.props} 
                         />
-                    })
-                }
+                     }) 
+                } 
                 </div>
             </div>
         );
