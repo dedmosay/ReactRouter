@@ -1,11 +1,11 @@
-const CarDetail = (props) => {
-    console.log(props)
+const CarDetail = ({match, location}) => {
+    console.log(location.state)
+    const { name, year, color } = location.state
     return (
         <div>
-            {props.match.params.name}
-            {/* Не работает после перезагрузке THE BUG */}
-            <div>{props.location.props.name}</div>
-            <div>{props.location.props.year}</div>
+            <p>{name}</p>
+            <p>{year}</p>
+            <p>{color}</p>
         </div>
     );
 }

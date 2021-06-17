@@ -1,16 +1,15 @@
 import { withRouter } from 'react-router-dom';
 
-const Car = (props) => {
+const Car = ({history, name, year, color}) => {
     return (<div className="Car"
         onClick={
-            () => props.history.push({
-                pathname: "/cars/" + props.name.toLowerCase(),
-                props
-            })
+            () => history.push({
+                pathname: "/cars/" + name.toLowerCase(),
+            }, {name, year, color})
         }
     >
-        <p>{props.name}</p>
-        <p>{props.year}</p>
+        <p>{name}</p>
+        <p>{year}</p>
     </div>);
 }
 
