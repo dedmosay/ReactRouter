@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Switch } from 'react-router-dom';
 import About from "../components/About";
+import CarDetail from "../components/CarDetail";
 import Cars from "../components/Cars";
 import Color from "../components/Color";
 import Home from "../components/Home";
@@ -17,7 +18,7 @@ class App extends Component {
                 <NavLink to="/" exact>Home</NavLink>
               </li>
               <li>
-                <NavLink to="/color" activeStyle={{color: 'green', backgroundColor: 'yellow'}} >Color</NavLink>
+                <NavLink to="/color" activeStyle={{ color: 'green', backgroundColor: 'yellow' }} >Color</NavLink>
               </li>
               <li>
                 <NavLink to={{
@@ -34,10 +35,13 @@ class App extends Component {
         </div>
         <hr />
         <div>
-          <Route path="/" exact component={Home}/>
-          <Route path="/color" component={Color}/>
-          <Route path="/about" component={About}/>
-          <Route path="/cars" component={Cars}/>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/color" component={Color} />
+            <Route path="/about" component={About} />
+            <Route path="/cars/:name" component={CarDetail} />
+            <Route path="/cars" component={Cars} />
+          </Switch>
         </div>
       </div>
     );
