@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, NavLink, Switch } from 'react-router-dom';
+import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import About from "../components/About";
 import CarDetail from "../components/CarDetail";
 import Cars from "../components/Cars";
@@ -41,6 +41,8 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/cars/:name" component={CarDetail} />
             <Route path="/cars" component={Cars} />
+            {/* <Route render={()=><div>404</div>} /> */}
+            <Redirect to={'/'}/>
           </Switch>
         </div>
       </div>

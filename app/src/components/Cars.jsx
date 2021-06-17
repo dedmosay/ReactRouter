@@ -4,9 +4,9 @@ import Car from "./Car";
 class Cars extends Component {
     state = {
         cars: [
-            { name: 'Ford', year: 2018 },
-            { name: 'Audi', year: 2016 },
-            { name: 'Mazda', year: 2010 }
+            { name: 'Ford', year: 2018, color: 'red' },
+            { name: 'Audi', year: 2016, color: 'blue' },
+            { name: 'Mazda', year: 2010, color: 'white' }
         ]
     }
 
@@ -28,7 +28,8 @@ class Cars extends Component {
                         return <Car key={index}
                             name={car.name}
                             year={car.year}
-                            pathname={car.name}
+                            color={car.color}
+                            // pathname={car.name}
                             // вместо того чтобы передавать все props - можно в компоненте Car добавить 
                             // import { withRouter } from 'react-router-dom' и этот (Car) компонент обернуть в withRouter
                             // {...this.props} 
